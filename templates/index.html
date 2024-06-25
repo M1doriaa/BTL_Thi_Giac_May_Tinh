@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image to Sketch</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Convert Image to Sketch</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file" required>
+      <input type="submit" value="Upload">
+    </form>
+
+    {% if original_image %}
+    <div class="image-container">
+      <div class="image-box">
+        <h2>Original Image:</h2>
+        <img src="{{ original_image }}" alt="Original Image" >
+      </div>
+      {% if sketch_path %}
+      <div class="image-box">
+        <h2>Sketch:</h2>
+        <img src="{{ sketch_path }}" alt="Sketch">
+        <a href="{{ sketch_path }}" download="sketch.png">Download Sketch</a>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <form method="post" action="{{ url_for('convert') }}">
+      <select name="convert_option">
+        <option value="Watercolor Sketch">Convert to Watercolor Sketch</option>
+        <option value="Pencil Sketch">Convert to Pencil Sketch</option>
+      </select>
+      <input type="submit" value="Convert">
+    </form>
+  </div>
+</body>
+</html>

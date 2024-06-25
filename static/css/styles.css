@@ -1,0 +1,74 @@
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        max-width: 800px; /* Tăng kích thước để chứa hai ảnh */
+        width: 100%;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    form {
+        margin: 20px 0;
+    }
+
+    input[type="file"] {
+        margin: 10px 0;
+    }
+
+    select, input[type="submit"] {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .image-box {
+        flex: 1 1 50%; /* Hiển thị 2 ảnh cạnh nhau */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    img {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    a:hover {
+        background-color: #0056b3;
+    }
+    
